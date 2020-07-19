@@ -1,0 +1,15 @@
+mixin icon(name,mod)
+	if(mod)
+		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+			use(xlink:href="images/sprite/symbol/sprite.svg#" + name)
+	else
+		svg(class="svg-sprite-icon icon-" + name)
+			use(xlink:href="images/sprite/symbol/sprite.svg#" + name)
+mixin r-nav__item(name,className='',link='#')
+	li.right-nav__item(class=className)
+		a(href=link).right-nav__link=name
+
+mixin left-nav__item(icon, className="")
+	li(class=className).left-nav__item
+		a(href="#").left-nav__link
+			+icon(icon)

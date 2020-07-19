@@ -1,0 +1,94 @@
+extends layout/main
+
+block content
+	section.fixed-elements
+		nav.nav.right-nav
+			ul.right-nav__list
+				+r-nav__item('Ниша','active')
+				+r-nav__item('Результат')
+				+r-nav__item('Критерии')
+				+r-nav__item('Об Алексе')
+				+r-nav__item('Процесс')
+				+r-nav__item('Формат')
+				+r-nav__item('Отзывы')
+				+r-nav__item('Стоимость')
+		nav.left-nav
+			a(href="#").sandwich-link
+				span.sandwich
+					span.sandwich-line.sandwich-line--top
+					span.sandwich-line.sandwich-line--center
+					span.sandwich-line.sandwich-line--bottom
+			ul.left-nav
+				+left-nav__item('svg1','active')
+				+left-nav__item('svg7')
+				+left-nav__item('svg2')
+				+left-nav__item('svg3')
+				+left-nav__item('svg4')
+				+left-nav__item('svg6')
+				+left-nav__item('svg5')
+				+left-nav__item('svg8')
+				+left-nav__item('svg9')
+				+left-nav__item('svg10')
+			.left-nav__bottom.flex-box
+				span.reviews Отзывы
+				span.reviews-number 464
+	section.banner-s
+		.container 
+			.banner-content.flex-box
+				.banner-left 
+					h3.banner-subtitle Программа
+					h1.banner-title Ниша
+					p.banner-text Выбери прибыльную бизнес модель для своего бизнеса!
+					form.form
+						.form-group.form-group--name
+							img(src="../images/user.png", alt="user")
+							input(type="text" placeholder="Имя").input-field.form-group--email
+						.form-group
+							img(src="../images/mail.png", alt="mail")
+							input(type="text" placeholder="E-mail").input-field
+						.form-group.form-group--phone
+							img(src="../images/phone.png", alt="phone")
+							input(type="text" placeholder="Телефон").input-field
+						input(type="submit" value="Получи спецпредложение").btn.form-btn
+						h4.form-details действует только на этой неделе
+				.banner-right
+					a(href="#").btn.yotube-btn.flex-box 
+						+icon('play','youtube-icon')
+						span Смотри видео<br> о программе
+						+icon('arrow', 'btn-arrow')
+	section.youtube-s
+		.container
+			.youtube-block
+				h2.youtube-title Одинаковые усилия в разных нишах дают совершенно разные результаты! 
+				.youtube-video
+					img(src="../images/youtube/youtube-before.png", alt="before").youtube-bg.youtube-before
+					img(src="../images/youtube/youtube-after.png", alt="before").youtube-bg.youtube-after
+					img(src="../images/youtube/youtube-video.png", alt="aleks").youtube-frame
+				h3.youtube-info Хочешь узнать, каких результатов ты добьешься?
+					+icon('arrow','youtube-arrow')
+	section.you-learn-s
+		.container
+			.section-header 
+				h2.section-title.section-title--decorated На программе НИША <span class="orange">Ты научишься:</span>
+			.learn-items.flex-box
+				.learn-item.flex-box
+					span.learn-item__count 01
+					span.learn-item__text Оценивать финансовый потенциал любого бизнеса
+				.learn-item.flex-box
+					span.learn-item__count 02
+					span.learn-item__text Определять ключевые точки роста различных бизнес моделей
+				.learn-item.flex-box
+					span.learn-item__count 03
+					span.learn-item__text Видеть тренд подъема или спада рынка деятельности
+				.learn-item.flex-box
+					span.learn-item__count 04
+					span.learn-item__text Прогнозировать продажи и прибыль любого коммерческого проекта
+			h3.learn-title Невероятное количество инсайтов, позволят тебе: 
+			.learn-footer
+				ul.learn-list
+					li.learn-list__item Сделать правильный выбор ниши на старте нового проекта
+					li.learn-list__item Отточить свою бизнес модель и ежегодно удваивать результаты
+				a.btn(href="#") Получи спецпредложение
+
+
+
